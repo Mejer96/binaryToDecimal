@@ -39,12 +39,12 @@ public class BinaryToDecimalCalculator {
 
     public static void convertBinaryToDecimals(String binaryNumberToConvert) {
         char[] binaryNumberAsCharArray = binaryNumberToConvert.toCharArray();
-        int counter = 0;
+        int binaryAsDecimals = 0;
         
         for (int i = 0; i < binaryNumberAsCharArray.length; i++) {
-            counter += Character.getNumericValue(binaryNumberAsCharArray[i]) * calculatePowerOf(binaryNumberAsCharArray.length - (i + 1));
+            binaryAsDecimals += Character.getNumericValue(binaryNumberAsCharArray[i]) * calculatePowerOf(binaryNumberAsCharArray.length - (i + 1));
         }
-        System.out.println(counter);
+        System.out.println(binaryAsDecimals);
     }
 
     public static int calculatePowerOf(int exponent) {
